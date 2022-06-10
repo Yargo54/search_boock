@@ -15,3 +15,7 @@ h3.ant-typography, h2.ant-typography, h1.ant-typography{
 .ant-select:not(.ant-select-customize-input) .ant-select-selector{
     background: #FFEE73;
 }
+
+.ant-select-selection-placeholder {
+    color: #6f6a6f;
+}

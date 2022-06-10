@@ -13,37 +13,5 @@
     margin-top: 50px;
 }
 
-.formItem__label label{
-    color: #48036F;
-    font-size: 16px;
-}
 
-.submitButton{
-    width: 150px;
-    background: #FFEE73;
-    color: #48036F;
-    border: none;
-    font-size: 16px;
-    height: auto;
-}
 
-.submitButton:hover{
-    border-color: #48036F;
-    background: #65039e;
-}
-
-.sortSelect{
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    color: #48036F;
-}
-
-.sortSelect__option{
-    color: #48036F;
-}
-
-.formInput{
-    background: #FFEE73;
-    border: none;
-}

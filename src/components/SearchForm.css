@@ -1,0 +1,23 @@
+.formItem__label label{
+    color: #48036F;
+    font-size: 16px;
+}
+
+.submitButton{
+    width: 150px;
+    background: #FFEE73;
+    color: #48036F;
+    border: none;
+    font-size: 16px;
+    height: auto;
+}
+
+.submitButton:hover, .submitButton:focus{
+    border-color: #48036F;
+    background: #65039e;
+}
+
+.formInput{
+    background: #FFEE73;
+    border: none;
+}
