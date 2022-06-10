@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ant-typography + h2.ant-typography{
+    margin-top: 0;
+}
+
+h3.ant-typography, h2.ant-typography, h1.ant-typography{
+    color: #48036F;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+    background: #FFEE73;
+}

@@ -1,0 +1,32 @@
+.header{
+    background: #D9F970;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+}
+
+.header__title{
+    padding-top: 10px;
+    margin-top: 0.2em;
+}
+
+.headerDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerDivTypography{
+    padding: 0 1.2em;
+}
+
+.siderTitleSearch{
+    margin-top: 0;
+    margin-bottom: 0 !important;
+}
+
+.siderTitleBooks{
+    margin-left: 75px;
+}
+
+.header__title{
+    margin-top: 0.2em;
+}

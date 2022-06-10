@@ -1,0 +1,15 @@
+.footer{
+    background-color: #D9F970;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 54px;
+}
+
+.footer__title__author{
+    margin-top: 20px;
+}
+
+.divContacts{
+    display: flex;
+    flex-direction: column;
+}
