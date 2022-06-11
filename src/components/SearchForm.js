@@ -1,6 +1,7 @@
 import { Component } from "react";
-import { Typography, Button, Form, Input } from "antd";
-import "./SearchForm.css"
+import { Button, Form, Input } from "antd";
+import "./SearchForm.css";
+import ApiContainer from "../API/ApiContainer";
 
 const layout = {
   labelCol: {
@@ -11,33 +12,44 @@ const layout = {
   },
 };
 
+const searchParam = {};
+
+const onSearch = (value) => {
+  searchParam.author = value.author;
+  searchParam.designation = value.designation;
+  searchParam.themes = value.themes;
+  searchParam.publishingHouse = value.publishingHouse;
+  console.log(searchParam);
+  ApiContainer.ProxyApiBooks.getSearchBooks(`https://www.googleapis.com/books/v1/volumes?q=${searchParam.author}&key=AIzaSyA8o1lCTefxo-KvhUkc8KdtFXMU3QQMFFc`)
+}
+
 class _SearchForm extends Component {
   render() {
     return (
-      <Form {...layout}>
+      <Form {...layout} onFinish={onSearch}>
         <Form.Item
-          name={["search", "author"]}
+          name={["author"]}
           label="Автор:"
           className="formItem__label"
         >
           <Input className="formInput" />
         </Form.Item>
         <Form.Item
-          name={["search", "designation"]}
+          name={["designation"]}
           label="Название"
           className="formItem__label"
         >
           <Input className="formInput" />
         </Form.Item>
         <Form.Item
-          name={["search", "themes"]}
+          name={["themes"]}
           label="Тематика"
           className="formItem__label"
         >
           <Input className="formInput" />
         </Form.Item>
         <Form.Item
-          name={["search", "publishingHouse"]}
+          name={["publishingHouse"]}
           label="Издательство"
           className="formItem__label"
         >
