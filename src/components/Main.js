@@ -22,7 +22,8 @@ class Main extends Component {
 
   onSearch = (value) => {
     chekFormValue(value, ["author", "title", "publishingHouse"]);
-    ApiContainer.ProxyApiBooks.getSearchBooks(value).then((data) =>
+    ApiContainer.ProxyApiBooks.getSearchBooks(value)
+    .then((data) =>
       this.setState({
         searchParams: data.items.map((item) => {
           if (item?.volumeInfo?.imageLinks?.smallThumbnail) {
@@ -44,7 +45,8 @@ class Main extends Component {
           }
         }),
       })
-    );
+    )
+    .catch(() => alert(`Упс! Что-то пошло не так! Проверьте ввод.`))
   };
 
   render() {
