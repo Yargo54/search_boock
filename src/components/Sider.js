@@ -8,16 +8,17 @@ const { Sider } = Layout;
 
 class _Sider extends Component {
   render() {
+    const { onSearch } = this.props;
     return (
-      <Sider className="sider" collapsedWidth="0" width={400}>
-        <Typography.Title level={3} className="search__title">
+      <Sider className="sider" width={350}>
+        <Typography.Title level={3} className="search__title" style={{marginBottom: 30}}>
           Введите параметры поиска
         </Typography.Title>
-        <_SearchForm />
-        <Typography.Title level={3} className="search__title titleSortMrgn">
+        <_SearchForm onSearch = {onSearch}/>
+        {/* <Typography.Title level={3} className="search__title titleSortMrgn">
           Выберите параметр сортировки
-        </Typography.Title> 
-        <_Select />
+        </Typography.Title>  */}
+        {/* <_Select /> */}
       </Sider>
     );
   }

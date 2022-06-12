@@ -25,10 +25,10 @@ class _Footer extends Component {
             </Typography.Title>
             <div className="divContacts">
               <Typography.Text strong style={{ cursor: "pointer" }}>
-                GitHub
+                <a href="https://github.com/Yargo54" target="_blanck" style={{color: "#48036F"}}>GitHub</a>
               </Typography.Text>
               <Typography.Text strong style={{ cursor: "pointer" }}>
-                Gmail
+                <a href="mailto:yargo.357@gmail.com" style={{color: "#48036F"}}>Gmail</a>
               </Typography.Text>
             </div>
           </div>
