@@ -1,6 +1,6 @@
 import { Component } from "react";
-import { Typography, Select } from "antd";
-import "./Select.css";
+import { Select } from "antd";
+import "../CSS/Select.css";
 
 const { Option } = Select;
 

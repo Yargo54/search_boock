@@ -1,12 +1,12 @@
 .formItem__label label{
-    color: #48036F;
+    color: white;
     font-size: 16px;
 }
 
 .submitButton{
     width: 180px;
-    background: #FFEE73;
-    color: #48036F;
+    background: #9B8EFF;
+    color: white;
     border: none;
     font-size: 16px;
     height: auto;
@@ -14,10 +14,10 @@
 
 .submitButton:hover, .submitButton:focus{
     border-color: #48036F;
-    background: #65039e;
+    background: #8176d5;
 }
 
 .formInput{
-    background: #FFEE73;
+    background: #9B8EFF;
     border: none;
 }

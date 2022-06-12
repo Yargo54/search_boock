@@ -1,5 +1,5 @@
 .content{
-    background: #D5B5E7;
+    background: #7D71D8;
     padding: 30px;
 }
 
@@ -11,12 +11,12 @@
 
 .authors__title{
     font-weight: bold;
-    color:black;
+    color: white;
 }
 
 .emptyContentText{
     font-size: 18px;
-    color: rgb(0, 0, 0);
+    color: white;
     text-align: center;
     font-weight: bold;
 }
