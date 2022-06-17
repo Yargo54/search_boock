@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { Layout, Card, List } from "antd";
 import "../CSS/Content.css";
+import { LikeOutlined } from '@ant-design/icons';
+
 
 const { Content } = Layout;
 const { Meta } = Card;
@@ -12,7 +14,7 @@ class _Content extends Component {
     if (params.length <= 0) {
       return (
         <Content className="content">
-          <div className="emptyContentText">Здесь будут карточки книг</div>
+          <div className="emptyContentText">Здесь отобразятся карточки книг...</div>
         </Content>
       )
     }
@@ -47,9 +49,13 @@ class _Content extends Component {
                     </div>
                   }
                 />
-                <a href={item.previewLink} target="_blank">
-                  Узнать подробнее
-                </a>
+                <div className="div__about__like">
+                  <a href={item.previewLink} target="_blank">
+                    Узнать подробнее
+                  </a>
+                  <LikeOutlined className="like"/>
+                </div>
+                
               </Card>
             </List.Item>
           )}

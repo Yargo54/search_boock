@@ -5,7 +5,9 @@ const baseUrl = "https://www.googleapis.com/books/v1/volumes?q=";
 
 class ApiBooks {
     static getSearchBooks(value) {
-        return Connector.getBooks(`${baseUrl} + ${value.themes}+ "+inauthor:" + ${value.author} + "+intitle:" + ${value.title} + "+inpublisher:" + ${value.publishingHouse}&maxResults=30&key=${apiKey}`)
+        let test = `${baseUrl}${value.title}+subject:${value.themes}+inauthor:${value.author}+inpublisher:${value.publishingHouse}&maxResults=30&key=${apiKey}`
+        console.log("test", test)
+        return Connector.getBooks(`${baseUrl}${value.title}+subject:${value.themes}+inauthor:${value.author}+inpublisher:${value.publishingHouse}&maxResults=30&key=${apiKey}`)
     }
 }
 

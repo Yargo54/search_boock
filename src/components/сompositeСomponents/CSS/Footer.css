@@ -2,14 +2,18 @@
     background-color: #493BA8;
     display: flex;
     justify-content: space-between;
-    padding: 20px 54px;
+    padding: 1.5em 0;
 }
 
 .footer__title__author{
-    margin-top: 20px;
+    align-self: center;
 }
 
-.divContacts{
+.contactsBlock{
+    padding-right: 1.2em;
+}
+
+.contactsBlock__info{
     display: flex;
     flex-direction: column;
 }

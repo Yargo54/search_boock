@@ -1,6 +1,7 @@
 .content{
     background: #7D71D8;
-    padding: 30px;
+    padding: 1.5em;
+    /* padding-top: 4em; */
 }
 
 .authorsContainer{
@@ -15,8 +16,18 @@
 }
 
 .emptyContentText{
-    font-size: 18px;
+    font-size: 16px;
     color: white;
-    text-align: center;
     font-weight: bold;
+    font-style: italic;
+}
+
+.div__about__like{
+    display: flex;
+    justify-content: space-between;
+}
+
+.like{
+    align-self: center;
+    font-size: 20px;
 }

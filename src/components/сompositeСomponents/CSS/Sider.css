@@ -1,17 +1,24 @@
 .sider{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 1.5em;
     background-color: #493BA8;
+    min-height: 100vh;
 }
 
 .search__title{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 1.5em;
 }
 
-.titleSortMrgn{
-    margin-top: 50px;
+.siderDivTypography{
+    margin-top: 1.6em;
 }
 
+.siderTitleSearch{
+    margin-top: 0;
+    margin-bottom: 0 !important;
+}
 
-
+.hrStyle{
+    width: 50%;
+    margin: 0;
+}
