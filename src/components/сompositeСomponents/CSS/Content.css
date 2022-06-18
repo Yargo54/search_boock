@@ -28,6 +28,13 @@
 }
 
 .like{
-    align-self: center;
     font-size: 20px;
+}
+
+.like__onClick{
+    color: #3415B0;
+}
+
+.like__notClick{
+    color: black;
 }

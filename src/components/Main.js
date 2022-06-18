@@ -15,11 +15,23 @@ function chekFormValue(val, dict) {
   });
 }
 
-let i = "http://books.google.com/books/content?id=odUHEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+let i =
+  "http://books.google.com/books/content?id=odUHEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api";
 
 class Main extends Component {
   state = {
     searchParams: [],
+    likeBooks: [],
+  };
+
+  onClickLike = (id) => {
+    const newBook = this.state.searchParams.find((book) => {
+      return book.id === id;
+    });
+    this.state.likeBooks.includes(newBook)
+      ? alert("Эта книга уже добавлена в список понравившегося")
+      : this.setState({ likeBooks: [...this.state.likeBooks, newBook] });
+    console.log("LIKES", this.state.likeBooks);
   };
 
   onSearch = (value) => {
@@ -30,36 +42,44 @@ class Main extends Component {
           searchParams: data.items.map((item) => {
             if (item?.volumeInfo?.imageLinks?.smallThumbnail) {
               return {
+                id: item.id,
                 author: item.volumeInfo.authors,
                 title: item.volumeInfo.title,
                 img: item.volumeInfo.imageLinks.smallThumbnail,
                 previewLink: item.volumeInfo.infoLink,
                 publishedDate: item.volumeInfo.publishedDate,
-                categories: item.volumeInfo.categories
+                categories: item.volumeInfo.categories,
+                webReaderLink: item.accessInfo.webReaderLink,
               };
             } else {
               return {
+                id: item.id,
                 author: item.volumeInfo.authors,
                 title: item.volumeInfo.title,
                 img: "https://www.hot-motor.ru/body/clothes/images/no_icon.png",
                 previewLink: item.volumeInfo.infoLink,
                 publishedDate: item.volumeInfo.publishedDate,
+                categories: item.volumeInfo.categories,
+                webReaderLink: item.accessInfo.webReaderLink,
               };
             }
           }),
         })
       )
-      .catch(() => alert(`Упс! Что-то пошло не так! Проверьте ввод.`))
+      .catch(() => alert(`Упс! Что-то пошло не так! Проверьте ввод.`));
   };
 
   render() {
     console.log(this.state.searchParams);
     return (
       <Layout>
-        <_Sider onSearch={this.onSearch} />
+        <_Sider onSearch={this.onSearch} likeBooks={this.state.likeBooks}/>
         <Layout>
           <_Header />
-          <_Content params={this.state.searchParams}/>
+          <_Content
+            params={this.state.searchParams}
+            onClickLike={this.onClickLike}
+          />
           <_Footer />
         </Layout>
       </Layout>

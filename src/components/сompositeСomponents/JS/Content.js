@@ -1,22 +1,23 @@
 import { Component } from "react";
-import { Layout, Card, List } from "antd";
+import { Layout, Card, List} from "antd";
 import "../CSS/Content.css";
-import { LikeOutlined } from '@ant-design/icons';
-
+import { LikeOutlined } from "@ant-design/icons";
 
 const { Content } = Layout;
 const { Meta } = Card;
 
 class _Content extends Component {
   render() {
-    const { params } = this.props;
+    const { params, onClickLike } = this.props;
 
     if (params.length <= 0) {
       return (
         <Content className="content">
-          <div className="emptyContentText">Здесь отобразятся карточки книг...</div>
+          <div className="emptyContentText">
+            Здесь отобразятся карточки книг...
+          </div>
         </Content>
-      )
+      );
     }
 
     return (
@@ -34,6 +35,7 @@ class _Content extends Component {
                 cover={<img alt="title img" src={item.img} />}
               >
                 <Meta
+                  key={item.id}
                   title={item.title}
                   description={
                     <div style={{ marginBottom: 15 }}>
@@ -50,12 +52,14 @@ class _Content extends Component {
                   }
                 />
                 <div className="div__about__like">
-                  <a href={item.previewLink} target="_blank">
-                    Узнать подробнее
+                  <a href={item.webReaderLink} target="_blank">
+                    Ознакомиться
                   </a>
-                  <LikeOutlined className="like"/>
+                  <LikeOutlined
+                    className="like"
+                    onClick={() => onClickLike(item.id)}
+                  />
                 </div>
-                
               </Card>
             </List.Item>
           )}
