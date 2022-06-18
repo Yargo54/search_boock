@@ -15,9 +15,6 @@ function chekFormValue(val, dict) {
   });
 }
 
-let i =
-  "http://books.google.com/books/content?id=odUHEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api";
-
 class Main extends Component {
   state = {
     searchParams: [],
@@ -31,7 +28,6 @@ class Main extends Component {
     this.state.likeBooks.includes(newBook)
       ? alert("Эта книга уже добавлена в список понравившегося")
       : this.setState({ likeBooks: [...this.state.likeBooks, newBook] });
-    console.log("LIKES", this.state.likeBooks);
   };
 
   onSearch = (value) => {
@@ -70,7 +66,6 @@ class Main extends Component {
   };
 
   render() {
-    console.log(this.state.searchParams);
     return (
       <Layout>
         <_Sider onSearch={this.onSearch} likeBooks={this.state.likeBooks}/>
